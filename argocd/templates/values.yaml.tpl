@@ -105,3 +105,8 @@ redis-ha:
   enabled: ${redis_ha_enable}
   exporter:
     enabled: true
+
+k exec -it -n rabbit-prod rabbitmq-prod-0  -- bash -c 'openssl s_client -connect 57.129.21.245:25672 -state -cert /opt/bitnami/rabbitmq/certs/server_certificate.pem -key /opt/bitnami/rabbitmq/certs/server_key.pem -CAfile /opt/bitnami/rabbitmq/certs/ca_certificate.pem 2>&1 | grep Verification'
+
+
+k exec -it -n rabbit-prod rabbitmq-prod-0  -- rabbitmqctl eval 'init:get_argument(proto_dist).'
