@@ -1,5 +1,6 @@
 module "argocd" {
-  source = "./argocd"
+  source      = "./argocd"
+  issuer_name = var.issuer_name
   argocd_config = {
     hostname            = var.argocd_server_host
     redis_ha_enabled    = var.redis_ha_enable

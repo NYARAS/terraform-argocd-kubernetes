@@ -15,6 +15,7 @@ resource "helm_release" "argocd_deploy" {
   values = [
     templatefile("${path.module}/templates/values.yaml.tpl",
       {
+        issuer_name         = var.issuer_name
         hostname            = var.argocd_config.hostname
         redis_ha_enable     = var.argocd_config.redis_ha_enabled
         autoscaling_enabled = var.argocd_config.autoscaling_enabled

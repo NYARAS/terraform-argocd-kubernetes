@@ -84,3 +84,8 @@ variable "ingress_class_name" {
   default     = "nginx"
   description = "Enter ingress class name which is created in EKS cluster"
 }
+
+variable "issuer_name" {
+  type        = string
+  description = "Enter ingress class name which is created in EKS cluster"
+}
