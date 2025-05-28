@@ -19,7 +19,7 @@ variable "argocd_helm_chart_version" {
 variable "argocd_server_host" {
   description = "Hostname for argocd (will be utilised in ingress if enabled)"
   type        = string
-  default     = "argocd-ovh.neuronsw.com"
+  default     = "argocd.example.com"
 }
 
 variable "argocd_ingress_class" {
@@ -83,14 +83,6 @@ variable "ingress_class_name" {
   type        = string
   default     = "nginx"
   description = "Enter ingress class name which is created in EKS cluster"
-}
-
-variable "hostname" {
-
-}
-
-variable "ingress_class_name" {
-
 }
 
 variable "redis_ha_enable" {
