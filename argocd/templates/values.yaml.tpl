@@ -76,7 +76,7 @@ server:
   ingress:
     enabled: true
     annotations:
-      cert-manager.io/cluster-issuer: letsencrypt
+      cert-manager.io/cluster-issuer: ${issuer_name}
       nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
       nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     ingressClassName: ${ingress_class_name}
