@@ -51,6 +51,10 @@ server:
   config:
     accounts.admin: apiKey   #login is available as default on admin user
     accounts.qa: apiKey,login
+  service:
+    type: NodePort
+    nodePortHttp: 30080
+    nodePortHttps: 30443
   extraArgs:
    - --insecure
   resources:
