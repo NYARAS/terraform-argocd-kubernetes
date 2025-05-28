@@ -84,3 +84,20 @@ variable "ingress_class_name" {
   default     = "nginx"
   description = "Enter ingress class name which is created in EKS cluster"
 }
+
+variable "hostname" {
+
+}
+
+variable "ingress_class_name" {
+
+}
+
+variable "redis_ha_enable" {
+  type    = bool
+  default = false
+}
+variable "autoscaling_enabled" {
+  type    = bool
+  default = false
+}
