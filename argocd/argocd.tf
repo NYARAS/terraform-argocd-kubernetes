@@ -20,6 +20,7 @@ resource "helm_release" "argocd_deploy" {
         redis_ha_enable     = var.argocd_config.redis_ha_enabled
         autoscaling_enabled = var.argocd_config.autoscaling_enabled
         ingress_class_name  = var.argocd_config.ingress_class_name
+        enabled             = var.enabled
       }
     )
   ]

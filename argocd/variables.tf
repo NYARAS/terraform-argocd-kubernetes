@@ -89,3 +89,8 @@ variable "issuer_name" {
   type        = string
   description = "Cluster Issuer Name."
 }
+
+variable "enabled" {
+  type    = bool
+  default = false
+}
