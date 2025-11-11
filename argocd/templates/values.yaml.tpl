@@ -77,8 +77,8 @@ server:
     enabled: true
     annotations:
       cert-manager.io/cluster-issuer: ${issuer_name}
-      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-      nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: ${enabled}
+      nginx.ingress.kubernetes.io/ssl-passthrough: ${enabled}
     ingressClassName: ${ingress_class_name}
     hostname: ${hostname}
     path: /

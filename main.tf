@@ -6,5 +6,6 @@ module "argocd" {
     redis_ha_enabled    = var.redis_ha_enable
     autoscaling_enabled = var.autoscaling_enabled
     ingress_class_name  = var.ingress_class_name
+    enabled             = var.enabled
   }
 }
